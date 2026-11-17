@@ -1,6 +1,6 @@
 # Hologrow for DeepSeek Harness
 
-[English](#english) | [中文](#中文)
+[中文](#安装) | [English](#english)
 
 DeepSeek Harness 插件。安装后，当前 profile 会连接 Hologrow 远程 MCP
 `https://mcp.hologrow.ai/mcp`，模型通过 `mcp__hologrow__*` 调用该工作区已开通的只读数据工具。
