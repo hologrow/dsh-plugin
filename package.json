@@ -1,0 +1,36 @@
+{
+  "name": "@hologrow/dsh-plugin",
+  "version": "0.1.0",
+  "description": "Connect DeepSeek Harness to the Hologrow commerce-data MCP.",
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "dsh",
+    "hologrow",
+    "mcp"
+  ],
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.2.0"
+  },
+  "files": [
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hologrow/dsh-plugin.git"
+  },
+  "homepage": "https://github.com/hologrow/dsh-plugin",
+  "bugs": {
+    "url": "https://github.com/hologrow/dsh-plugin/issues"
+  }
+}

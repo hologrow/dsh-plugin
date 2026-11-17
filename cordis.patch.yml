@@ -1,0 +1,14 @@
+# Mount the hosted Hologrow MCP. The CLI already ships @deepseek-ai/dsh-mcp-client.
+# Tool calls wait up to 200s so query_db (65s upstream) and allowlisted
+# query_db_analytics (180s) can finish. A missing key must not block profile startup.
+- insert:
+    - id: hologrow
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: hologrow
+        transport: streamable-http
+        url: https://mcp.hologrow.ai/mcp
+        headers:
+          Authorization: !!js 'process.env.HOLOGROW_API_KEY ? `Bearer ${process.env.HOLOGROW_API_KEY}` : ""'
+        toolCallTimeoutMs: 200000
+        failOnStartupError: false
